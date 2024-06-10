@@ -4,12 +4,12 @@ FROM python:3.6
 WORKDIR /app
 
 # Install app dependencies
-COPY requirements.txt ./
+COPY . .
 
 RUN pip install -r requirements.txt
 
 # Bundle app source
-COPY /app
+#COPY /app
 
 EXPOSE 8080
 CMD [ "python", "app.py" ]
